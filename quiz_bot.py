@@ -17,11 +17,12 @@ from telebot import types
 
 # ============================ НАСТРОЙКИ ============================
 # Вставьте СВЕЖИЙ токен (старый обязательно отзовите в @BotFather!)
-BOT_TOKEN = "8939631783:AAHgPB9wVbbhnS2lLeRzPqgFWe4f86FJiEo"
 
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8939631783:AAHgPB9wVbbhnS2lLeRzPqgFWe4f86FJiEo")
+OWNER_ID = int(os.getenv("OWNER_ID", "1649433338"))
 # Ваш Telegram ID — сюда приходят отчёты по студентам.
 # Чтобы узнать свой ID: запустите бота и отправьте ему команду /myid
-OWNER_ID = 1649433338
+
 
 SECTIONS_DIR = "sections"   # папка с файлами разделов (.txt)
 TIME_CLOSED = 15            # секунд на закрытый вопрос
@@ -166,7 +167,7 @@ def cmd_start(message):
     bot.send_message(
         uid,
         "Ассалому алайкум! 👋\n\n"
-        "Это тестовый бот Softclub Academy.\n"
+        "Это тестовый бот SMR.\n"
         "Для начала введите вашу <b>Фамилию и Имя</b>:",
         parse_mode="HTML",
     )
