@@ -15,8 +15,7 @@ import threading
 import telebot
 from telebot import types
 
-# ============================ НАСТРОЙКИ ============================
-# Вставьте СВЕЖИЙ токен (старый обязательно отзовите в @BotFather!)
+
 
 BOT_TOKEN = os.getenv("BOT_TOKEN", "8939631783:AAHgPB9wVbbhnS2lLeRzPqgFWe4f86FJiEo")
 OWNER_ID = int(os.getenv("OWNER_ID", "1649433338"))
